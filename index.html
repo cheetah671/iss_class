@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Monitering</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cyber-grid"></div>
+    <header>
+        <h1>Water Quality Management System</h1>
+    </header>
+
+    <main class="dashboard">
+        <!-- Left Column -->
+        <div class="dashboard-column">
+            <!-- Live Data Card -->
+            <div class="card fade-in">
+                <h2>Live System Metrics</h2>
+                <div id="live-data">
+                    <div class="gauge-container">
+                        <div id="temp-gauge"></div>
+                        <div id="tds-gauge"></div>
+                        <div id="turbidity-gauge"></div>
+                        <div id="ph-gauge"></div>
+                    </div>
+                    <div class="data-card" id="last-update"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="dashboard_inner2">
+            <!-- Pump Control Card -->
+            <div class="card fade-in">
+                <h2>Pump Control</h2>
+                <div class="button-group">
+                    <button id="pump-on" class="btn btn-cyber">Activate Pump</button>
+                    <button id="pump-off" class="btn btn-cyber">Deactivate Pump</button>
+                </div>
+            </div>
+
+            <!-- History Card -->
+            <div class="card fade-in">
+                <h2>Data History</h2>
+                <div class="button-group">
+                    <button onclick="window.location.href='history.html'" 
+                            class="btn btn-cyber">View Full History</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
